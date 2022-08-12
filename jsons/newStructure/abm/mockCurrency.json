@@ -1,0 +1,106 @@
+[
+  {
+    "id": "abmWrapperLeft",
+    "component": "html|div",
+    "styles": {
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "alignContent": "flex-start",
+      "flexWrap": "wrap",
+      "flex": 3
+    },
+    "children": [
+      {
+        "id": "currencyId",
+        "component": "Material|TextField",
+        "props": {
+          "label": "currencyId"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      },
+      {
+        "id": "currencyDesc",
+        "component": "Material|TextField",
+        "props": {
+          "label": "currencyDesc"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      },
+      {
+        "id": "currencyMnemonic",
+        "component": "Material|TextField",
+        "props": {
+          "label": "currencyMnemonic"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      },
+      {
+        "id": "currencyFraction",
+        "component": "Material|TextField",
+        "props": {
+          "label": "currencyFraction"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      },
+      {
+        "id": "clientCode",
+        "component": "Material|TextField",
+        "props": {
+          "label": "clientCode"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      },
+      {
+        "id": "currencyThousandSeparator",
+        "component": "Material|TextField",
+        "props": {
+          "label": "currencyThousandSeparator"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      },
+      {
+        "id": "currencyDecimalSeparator",
+        "component": "Material|TextField",
+        "props": {
+          "label": "currencyDecimalSeparator"
+        },
+        "styles": {
+          "paddingRight": 50
+        }
+      }
+    ]
+  },
+  {
+    "id": "abmWrapperRight",
+    "component": "html|div",
+    "styles": {
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "paddingLeft": 70,
+      "flex": 1
+    },
+    "children": [
+      {
+        "id": "abmList",
+        "component": "VirtualizedList",
+        "styles": {},
+        "props": {
+          "slice": "abm",
+          "primary": "currencyDesc"
+        }
+      }
+    ]
+  }
+]

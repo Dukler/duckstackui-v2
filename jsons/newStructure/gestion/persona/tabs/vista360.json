@@ -1,0 +1,342 @@
+[
+  {
+    "id": "gptTopWrapper",
+    "component": "html|div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "flexWrap": "wrap",
+        "width": "100%"
+      }
+    },
+    "children": [
+      {
+        "isMetadata": true,
+        "order": [
+          "lastName",
+          "motherLastName",
+          "firstName",
+          "birthDate",
+          "genderId",
+          "maritalStatusId",
+          "nacionalidad",
+          "actividad",
+          "claseCotizante",
+          "tipoTrabajador",
+          "sistemaSalud",
+          "identificationType",
+          "hola",
+          "identificationNumber"
+        ]
+      },
+      {
+        "id": [
+          "lastName",
+          "motherLastName",
+          "firstName",
+          "identificationNumber"
+        ],
+        "component": "Material|TextField",
+        "hola": {
+          "props": {
+            "label": "hola"
+          }
+        },
+        "lastName": {
+          "props": {
+            "label": "apellido"
+          }
+        },
+        "firstName": {
+          "props": {
+            "label": "nombre"
+          }
+        },
+        "motherLastName": {
+          "props": {
+            "label": "apellido materno"
+          }
+        },
+        "globalProps": {
+          "variant": "filled",
+          "style": {
+            "minWidth": "31%"
+          }
+        }
+      },
+      {
+        "id": [
+          "maritalStatusId",
+          "claseCotizante",
+          "identificationType",
+          "nacionalidad",
+          "tipoTrabajador",
+          "genderId",
+          "actividad",
+          "sistemaSalud",
+          "hola"
+        ],
+        "component": "Select",
+        "globalProps": {
+          "slice": "gestion",
+          "style": {
+            "minWidth": "31%"
+          }
+        }
+      },
+      {
+        "id": "birthDate",
+        "component": "DatePicker",
+        "props": {
+          "style": {
+            "minWidth": "31%"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "component": "Material|Divider"
+  },
+  {
+    "id": "gptBotWrapper",
+    "component": "html|div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "width": "100%",
+        "minHeight": 200
+      }
+    },
+    "children": [
+      {
+        "id": "gptRating",
+        "component": "SimpleRating",
+        "selfWrap": {
+          "component": "FormTitle",
+          "props": {
+            "title": "Valoracion",
+            "divider": true,
+            "style": {
+              "padding": 10,
+              "flex": 1
+            }
+          }
+        },
+        "props": {
+          "style": {}
+        }
+      },
+      {
+        "id": "gptTable",
+        "component": "VirtualizedTable",
+        "selfWrap": {
+          "component": "FormTitle",
+          "props": {
+            "title": "Identificaciones",
+            "divider": true,
+            "style": {
+              "padding": 10,
+              "flex": 1
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginTop": 5,
+            "elevation": 3,
+            "width": "100%",
+            "height": 150,
+            "overflowY": "hidden"
+          },
+          "columns": [
+            {
+              "width": 200,
+              "label": "Tipo",
+              "dataKey": "firstName"
+            },
+            {
+              "width": 200,
+              "label": "Numero",
+              "dataKey": "secondName"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "component": "Material|Divider"
+  },
+  {
+    "id": "gptEmailPhoneWrapper",
+    "component": "html|div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "width": "100%",
+        "minHeight": 200
+      }
+    },
+    "children": [
+      {
+        "id": "gptTableEmail",
+        "component": "VirtualizedTable",
+        "selfWrap": {
+          "component": "FormTitle",
+          "props": {
+            "title": "Emails",
+            "divider": true,
+            "style": {
+              "padding": 10,
+              "flex": 1
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginTop": 5,
+            "elevation": 3,
+            "width": "100%",
+            "height": 150,
+            "overflowY": "hidden"
+          },
+          "columns": [
+            {
+              "width": 200,
+              "label": "Tipo",
+              "dataKey": "firstName"
+            },
+            {
+              "width": 200,
+              "label": "Email",
+              "dataKey": "secondName"
+            },
+            {
+              "width": 200,
+              "label": "Acciones",
+              "dataKey": "secondName"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gptTablePhone",
+        "component": "VirtualizedTable",
+        "selfWrap": {
+          "component": "FormTitle",
+          "props": {
+            "title": "Teléfonos",
+            "divider": true,
+            "style": {
+              "padding": 10,
+              "flex": 1
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginTop": 5,
+            "elevation": 3,
+            "width": "100%",
+            "height": 150,
+            "overflowY": "hidden"
+          },
+          "columns": [
+            {
+              "width": 200,
+              "label": "Tipo",
+              "dataKey": "firstName"
+            },
+            {
+              "width": 200,
+              "label": "Número",
+              "dataKey": "secondName"
+            },
+            {
+              "width": 200,
+              "label": "Acciones",
+              "dataKey": "secondName"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "component": "Material|Divider"
+  },
+  {
+    "id": "gptTableAddress",
+    "component": "VirtualizedTable",
+    "selfWrap": {
+      "component": "FormTitle",
+      "props": {
+        "title": "Domicilio/s",
+        "divider": true,
+        "style": {
+          "padding": 10,
+          "width": "100%"
+        }
+      }
+    },
+    "props": {
+      "style": {
+        "marginTop": 5,
+        "elevation": 3,
+        "width": "100%",
+        "height": 150,
+        "overflowY": "hidden"
+      },
+      "columns": [
+        {
+          "width": 200,
+          "label": "Tipo",
+          "dataKey": "firstName"
+        },
+        {
+          "width": 200,
+          "label": "Calle",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Numero",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Provincia",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Comuna",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Codigo Postal",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Piso",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Depto",
+          "dataKey": "secondName"
+        },
+        {
+          "width": 200,
+          "label": "Acciones",
+          "dataKey": "secondName"
+        }
+      ]
+    }
+  }
+]

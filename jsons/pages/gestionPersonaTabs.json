@@ -1,0 +1,62 @@
+[
+  {
+    "isMetaData": true
+  },
+  {
+    "id": "gestionPersonaTabs",
+    "component": "DynamicTabs",
+    "additionalContent": {
+      "propsBased": {
+        "attribute": "tabs.ids",
+        "path": "/gestionPersonaTabs/"
+      }
+    },
+    "props": {
+      "tabs": {
+        "ids": [
+          "vista360",
+          "relaciones",
+          "segmentos",
+          "archivos",
+          "nota",
+          "polizas",
+          "EPI",
+          "perfilInversor",
+          "cuestionariosMedicos"
+        ],
+        "byId": {
+          "vista360": {
+            "label": "Vista 360"
+          },
+          "relaciones": {
+            "label": "Relaciones"
+          },
+          "segmentos": {
+            "label": "Segmentos"
+          },
+          "archivos": {
+            "label": "Archivos"
+          },
+          "nota": {
+            "label": "Nota"
+          },
+          "polizas": {
+            "label": "Polizas"
+          },
+          "EPI": {
+            "label": "EPI"
+          },
+          "perfilInversor": {
+            "label": "Perfil de Inversor"
+          },
+          "cuestionariosMedicos": {
+            "label": "Cuestionarios Medicos"
+          }
+        }
+      },
+      "style": {
+        "maxWidth": "100%"
+      }
+    }
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+  "id": ["maritalStatusId","claseCotizante","identificationType","nacionalidad","tipoTrabajador","genderId","actividad","sistemaSalud"],
+  "component": "Select",
+  "globalProps": {
+    "slice": "gestion",
+    "style": {
+      "minWidth": "31%"
+    }
+  },
+  "genderId": {
+    "props": {
+      "label": "Genero"
+    }
+  },
+  "claseCotizante": {
+    "props": {
+      "label": "clase cotizante"
+    }
+  },
+  "identificationType": {
+    "props": {
+      "label": "tipo identificacion"
+    }
+  },
+  "nacionalidad": {
+    "props": {
+      "label": "Nacionalidad"
+    }
+  },
+  "tipoTrabajador": {
+    "props": {
+      "label": "Tipo trabajador"
+    }
+  },
+  "maritalStatusId": {
+    "props": {
+      "label": "Marital"
+    }
+  },
+  "actividad": {
+    "props": {
+      "label": "Actividad"
+    }
+  },
+  "sistemaSalud": {
+    "props": {
+      "label": "Sistema Salud"
+    }
+  }
+  },
+  {
+    "id": "demoGrid",
+    "component": "VirtualizedTableDEMO",
+    "props": {
+      "columns": [
+        {
+          "width": 200,
+          "label": "value",
+          "dataKey": "value"
+        },
+        {
+          "width": 200,
+          "label": "label",
+          "dataKey": "label"
+        }
+      ],
+      "style": {
+        "marginTop": 2,
+        "elevation": 3,
+        "flex": 1,
+        "flexGrow": 10,
+        "width": "100%",
+        "overflowY": "hidden",
+        "height": 500
+      }
+    }
+  }
+]

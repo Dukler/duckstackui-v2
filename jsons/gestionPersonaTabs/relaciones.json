@@ -1,0 +1,45 @@
+[
+  {
+    "id": "relacionesTest",
+    "component": "CardPresentation",
+    "modal": {"id":"relacionesModal", "prop":"onClick"},
+    "props": {
+      "style": {}
+    }
+  },
+  {
+    "id": "relacionesModal",
+    "component": "Modal",
+    "props": {
+      "style": {}
+    },
+    "children": [
+      {
+        "id": "relacionesModalName",
+        "component": "Material|TextField",
+        "props": {
+          "style": {}
+        }
+      },
+      {
+        "id": "relacionesModalButton",
+        "component": "Button",
+        "eventListeners": {
+          "onClick": {
+            "script": "SimpleState|pushValue",
+            "props": {
+              "componentId": "relacionesTest",
+              "data": {
+                "title":"byId.relacionesModalName.value"
+              }
+            }
+          }
+        },
+        "props": {
+          "style": {},
+          "label": "Test"
+        }
+      }
+    ]
+  }
+]

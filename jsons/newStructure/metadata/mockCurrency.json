@@ -1,0 +1,7 @@
+{
+    "primary":"currencyDesc",
+    "entities":["mockCurrency","mockInvestmentIndex"],
+    "eventListeners":{
+        "onChange":{}
+    }
+}

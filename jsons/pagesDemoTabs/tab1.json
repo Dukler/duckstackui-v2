@@ -1,0 +1,21 @@
+[
+  {
+    "id": ["lastName","firstName","qsa"],
+    "component": "Material|TextField",
+    "lastName": {
+      "props": {
+        "label": "apellido"
+      } 
+    },
+    "firstName": {
+      "props": {
+        "label": "nombre"
+      }
+    },
+    "motherLastName": {
+      "props": {
+        "label": "apellido materno"
+      }
+    }
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "id": "wrapperLeft",
+    "component": "HtmlElement",
+    "styles":{
+      "display":"flex",
+      "justifyContent":"flex-start",
+      "alignContent":"flex-start",
+      "flexWrap":"wrap",
+      "flex":3
+    },
+    "props": {
+      "element": "div"
+    },
+    "children": [
+      {
+        "id": "currencyDesc",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "currencyDesc"
+        }
+      },
+      {
+        "id": "currencyMnemonic",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "currencyMnemonic"
+        }
+      },
+      {
+        "id": "currencyFraction",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "currencyFraction"
+        }
+      },
+      {
+        "id": "clientCode",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "clientCode"
+        }
+      },
+      {
+        "id": "currencyThousandSeparator",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "currencyThousandSeparator",
+          "InputLabelProps":{
+            "shrink":true
+          }
+        }
+      },
+      {
+        "id": "currencyDecimalSeparator",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "currencyDecimalSeparator"
+        }
+      },
+      {
+        "id": "indexPercentage",
+        "library": "Material",
+        "component": "TextField",
+        "styles":{
+          "paddingRight":50
+        },
+        "props": {
+          "label": "indexPercentage"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrapperRight",
+    "component": "HtmlElement",
+    "styles":{
+      "display":"flex",
+      "flex":1,
+      "paddingLeft":70
+    },
+    "props": {
+      "element": "div"
+    },
+    "children": [
+      {
+        "id": "abmList",
+        "component": "VirtualizedList",
+        "styles":{},
+        "props": {
+          "slice": "abm",
+          "primary": "currencyDesc"
+        }
+      }
+    ]
+  }
+]

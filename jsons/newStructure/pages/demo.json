@@ -1,0 +1,34 @@
+[
+  {
+    "isMetaData": true
+  },
+  {
+    "id": "demoTabs",
+    "component": "DynamicTabs",
+    "additionalContent": {
+      "propsBased": {
+        "attribute": "tabs.ids",
+        "path": "/pagesDemoTabs/"
+      }
+    },
+    "props": {
+      "tabs": {
+        "ids": [
+          "tab1",
+          "tab2"
+        ],
+        "byId": {
+          "tab1": {
+            "label": "tab1"
+          },
+          "tab2": {
+            "label": "tab2"
+          }
+        }
+      },
+      "style": {
+        "maxWidth": "100%"
+      }
+    }
+  }
+]

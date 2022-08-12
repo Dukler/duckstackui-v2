@@ -1,0 +1,98 @@
+{
+  "apiCalls": [
+    {
+      "entity":"party",
+      "url": "/party/V1/?id=@",
+      "service": "party",
+      "isCollection": false
+    },
+    {
+      "entity":"person",
+      "url": "/party/V1/persons/?id=@",
+      "service": "party",
+      "isCollection": true
+    },
+    {
+      "entity":"identification",
+      "url": "/party/V1/identifications/?partyId=@",
+      "service": "party",
+      "isCollection": true
+    },
+    {
+      "entity":"identificationType",
+      "url": "/party/V1/identification-types",
+      "service": "party",
+      "isCollection": true
+    },
+    {
+      "entity":"ciiu",
+      "url": "/party/V1/party-ciius",
+      "service": "party",
+      "isCollection": true
+    },
+    {
+      "entity":"gender",
+      "url": "/party/V1/genders",
+      "service": "party",
+      "isCollection": true
+    },
+    {
+      "entity":"marital",
+      "url": "/party/V1/marital-statuses",
+      "service": "party",
+      "isCollection": true
+    }
+  ],
+
+  "components":[
+    {
+      "id": "lastName",
+      "source": "person.lastName"
+    },
+    {
+      "id": "motherLastName",
+      "source": "person.motherLastName"
+    },
+    {
+      "id": "firstName",
+      "source": "person.firstName"
+    },
+    {
+      "id": "birthDate",
+      "source": "person.birthDate"
+    },
+    {
+      "id": "genderId",
+      "source": "gender.genderDesc",
+      "selected": "person.genderId"
+    },
+    {
+      "id": "maritalStatusId",
+      "source": "marital.maritalStatusDesc",
+      "selected": "person.maritalStatusId"
+    },
+    {
+      "id": "nacionalidad",
+      "source": "country.countryDesc",
+      "selected": "party.nationality"
+    },
+    {
+      "id": "actividad",
+      "source": "ciiu.ciiuDescription",
+      "selected": "party.ciiuId"
+    },
+    {
+      "id": "tipoTrabajador",
+      "source": "person.tipoTrabajador"
+    },
+    {
+      "id": "identificationType",
+      "source": "identificationType.identificationTypeDesc",
+      "selected": "identification.identificationTypeId"
+    },
+    {
+      "id": "identificationNumber",
+      "source": "identification.identificationId"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "relacionesTest",
+    "component": "CardPresentation",
+    "props": {
+      "style": {}
+    }
+  }
+]

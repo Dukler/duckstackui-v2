@@ -1,0 +1,207 @@
+[
+  {
+    "id": "gestionWrapper",
+    "component": "html|div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "flex": 1,
+        "flexWrap": "wrap",
+        "flexDirection": "column",
+        "height": "100%"
+      }
+    },
+    "children": [
+      {
+        "id": "gestionAccordion",
+        "component": "Accordion",
+        "props": {
+          "slice": "gestion",
+          "style": {
+            "flex": 1
+          },
+          "detailContainerProps": {
+            "style": {
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "flexWrap": "wrap",
+              "width": "88vw"
+            }
+          },
+          "items": [
+            {
+              "summary": ["General settings","I am an accordion"],
+              "details": [
+                {
+                  "isMetadata": true,
+                  "order": ["lastName","motherLastName","firstName","birthDate","genderId","maritalStatusId","nacionalidad","actividad","claseCotizante","tipoTrabajador","sistemaSalud","identificationType","identificationNumber","gestionButton"]
+                },
+                {
+                  "id": ["lastName","motherLastName","firstName","identificationNumber"],
+                  "component": "Material|TextField",
+                  "lastName": {
+                    "props": {
+                      "label": "apellido"
+                    }
+                  },
+                  "firstName": {
+                    "props": {
+                      "label": "nombre"
+                    }
+                  },
+                  "motherLastName": {
+                    "props": {
+                      "label": "apellido materno"
+                    }
+                  },
+                  "identificationNumber": {
+                    "props": {
+                      "label": "identificacion"
+                    }
+                  },
+                  "globalProps": {
+                    "variant": "filled",
+                    "style": {
+                      "minWidth": "31%"
+                    }
+                  }
+                },
+                {
+                  "id": ["maritalStatusId","claseCotizante","identificationType","nacionalidad","tipoTrabajador","genderId","actividad","sistemaSalud"],
+                  "component": "Select",
+                  "globalProps": {
+                    "slice": "gestion",
+                    "style": {
+                      "minWidth": "31%"
+                    }
+                  },
+                  "genderId": {
+                    "props": {
+                      "label": "Genero"
+                    }
+                  },
+                  "claseCotizante": {
+                    "props": {
+                      "label": "clase cotizante"
+                    }
+                  },
+                  "identificationType": {
+                    "props": {
+                      "label": "tipo identificacion"
+                    }
+                  },
+                  "nacionalidad": {
+                    "props": {
+                      "label": "Nacionalidad"
+                    }
+                  },
+                  "tipoTrabajador": {
+                    "props": {
+                      "label": "Tipo trabajador"
+                    }
+                  },
+                  "maritalStatusId": {
+                    "props": {
+                      "label": "Marital"
+                    }
+                  },
+                  "actividad": {
+                    "props": {
+                      "label": "Actividad"
+                    }
+                  },
+                  "sistemaSalud": {
+                    "props": {
+                      "label": "Sistema Salud"
+                    }
+                  }
+                },
+                {
+                  "id": "birthDate",
+                  "component": "DatePicker",
+                  "props": {
+                    "style": {
+                      "minWidth": "31%"
+                    }
+                  }
+                },
+                {
+                  "id": "gestionButton",
+                  "component": "Button",
+                  "eventListeners": {
+                    "onClick": {
+                      "script": "Custom|searchPersonButton",
+                      "props": {
+                        "andromeda": true,
+                        "componentId": "gestionTable"
+                      }
+                    }
+                  },
+                  "props": {
+                    "style": {
+                      "minWidth": "31%"
+                    },
+                    "label": "Test"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "gestionTable",
+        "component": "VirtualizedTable",
+        "props": {
+          "actions": {
+            "redirect": {
+              "label": "Find",
+              "icon": "asd",
+              "exec": "redirect",
+              "props": {
+                "test": "testeo"
+              }
+            }
+          },
+          "columns": [
+            {
+              "width": 200,
+              "label": "Nombre",
+              "dataKey": "firstName"
+            },
+            {
+              "width": 200,
+              "label": "Segundo nombre",
+              "dataKey": "secondName"
+            },
+            {
+              "width": 200,
+              "label": "Apellido",
+              "dataKey": "lastName"
+            },
+            {
+              "width": 200,
+              "label": "Apellido materno",
+              "dataKey": "motherLastName"
+            },
+            {
+              "width": 200,
+              "label": "Fecha de nacimiento",
+              "dataKey": "birthDate"
+            }
+          ],
+          "style": {
+            "marginTop": 2,
+            "elevation": 3,
+            "flex": 1,
+            "flexGrow": 10,
+            "width": "100%",
+            "overflowY": "hidden"
+          }
+        }
+      }
+    ]
+  }
+
+]
